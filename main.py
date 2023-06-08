@@ -8,7 +8,7 @@ response = requests.get(url=URL)
 webs = response.text
 
 soup = BeautifulSoup(webs, "html.parser")
-top_song = soup.find_all(name="h3", class_="c-title a-font-primary-bold-l a-font-primary-bold-m@mobile-max lrv-u-color"
+top_song = soup.find(name="h3", class_="c-title a-font-primary-bold-l a-font-primary-bold-m@mobile-max lrv-u-color"
                                            "-black u-color-white@mobile-max lrv-u-margin-r-150")
 
 other_songs = soup.find_all(name="h3",
